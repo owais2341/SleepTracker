@@ -1,4 +1,4 @@
-name: GitHub Action Workflow
+name: GitHub Action Workflow With Cache
 
 on:
   push:
@@ -35,6 +35,7 @@ jobs:
 
     # Step 4: Install dependencies
     - name: Install dependencies
+      working-directory: frontend
       run: npm install
 
     # Step 5: Simple echo message
