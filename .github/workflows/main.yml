@@ -1,4 +1,4 @@
-name: Github Action Workflow
+name: Github Action Workflow Without Cache
 
 on:
   push:
@@ -23,6 +23,7 @@ jobs:
         node-version: '16'
 
     - name: Install dependencies
+      working-directory: frontend
       run: npm install
 
     - name: Simple echo message
