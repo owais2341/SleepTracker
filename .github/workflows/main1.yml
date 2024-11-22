@@ -37,7 +37,12 @@ jobs:
     - name: Install dependencies
       working-directory: frontend
       run: npm install
-
+      
+    - name: List npm cache contents
+      run: |
+        echo "Contents of ~/.npm:"
+        ls -R ~/.npm
+        
     # Step 5: Simple echo message
     - name: Simple echo message
       run: echo "GitHub Actions workflow executed successfully!"
