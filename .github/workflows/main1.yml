@@ -38,10 +38,24 @@ jobs:
       working-directory: frontend
       run: npm install
       
+    # Step 5: List the cache content
     - name: List npm cache contents
       run: |
         echo "Contents of ~/.npm:"
         ls -R ~/.npm
+        
+     # Step 6: Archive npm cache
+    - name: Archive npm cache
+      run: |
+        tar -czvf npm-cache.tar.gz -C ~/.npm .
+        echo "npm cache archived."
+
+    # Step 7: Upload npm cache as artifact
+    - name: Upload npm cache artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: npm-cache
+        path: npm-cache.tar.gz
         
     # Step 5: Simple echo message
     - name: Simple echo message
