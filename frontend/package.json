@@ -20,8 +20,7 @@
     "reactstrap": "^8.4.1",
     "recharts": "^1.8.5",
     "simple-statistics": "^7.0.9",
-    "yarn-check": "^0.0.3",
-    "lodash": "^4.17.21"
+    "yarn-check": "^0.0.3"    
   },
   "scripts": {
     "start": "react-scripts start",
