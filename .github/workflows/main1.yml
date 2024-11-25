@@ -38,11 +38,11 @@ jobs:
       working-directory: frontend
       run: npm install
 
-    - name: Save npm cache
-      uses: actions/cache@v3
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    #- name: Save npm cache
+    #  uses: actions/cache@v3
+    #  with:
+    #    path: ~/.npm
+    #    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       
     # Step 5: List the cache content
     #- name: List npm cache contents
